@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="mystyles1.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Tables</title>
+  </head>
+  <body>
+    <h1>Hello bootstrap</h1>
+    <table class="table table-bordered table-hover">
+      <caption>
+        My table
+      </caption>
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>cnic</th>
+          <th>phone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>name</td>
+
+          <td colspan="2">phone</td>
+        </tr>
+        <tr>
+          <td>name</td>
+          <td>cnic</td>
+          <td>phone</td>
+        </tr>
+        <tr>
+          <td rowspan="2">name</td>
+
+          <td>cnic</td>
+          <td>phone</td>
+        </tr>
+        <tr>
+          <td>name</td>
+          <td>cnic</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

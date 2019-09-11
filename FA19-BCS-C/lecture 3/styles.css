@@ -1,0 +1,23 @@
+ul {
+  list-style-type: none;
+  background-color: aqua;
+}
+
+li {
+  display: inline;
+  background-color: blue;
+}
+a {
+  color: white;
+}
+a:hover {
+  color: red;
+}
+#pakistan {
+  background-color: aqua;
+  margin: 30px;
+  padding: 10px;
+}
+.test {
+  color: red;
+}

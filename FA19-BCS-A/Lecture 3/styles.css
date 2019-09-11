@@ -1,0 +1,44 @@
+#menu {
+  background-color: aqua;
+  position: relative;
+}
+#menu li {
+  display: inline;
+}
+a:hover {
+  color: lightcoral;
+}
+#pak {
+  color: green;
+  background-color: aqua;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid;
+  min-height: 200px;
+  clear: both;
+}
+.shout {
+  color: red;
+}
+.test {
+  background-color: yellowgreen;
+  color: white;
+}
+#sidebar {
+  width: 20%;
+  float: right;
+  background-color: blue;
+}
+
+.gototop {
+  position: absolute;
+  right: 20px;
+  top: 100px;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+}
+#menu li:hover .dropdown {
+  display: block;
+}

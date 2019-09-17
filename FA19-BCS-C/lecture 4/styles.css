@@ -1,0 +1,77 @@
+#topMenu {
+  list-style-type: none;
+  background-color: aqua;
+}
+
+#topMenu > li {
+  display: inline;
+  background-color: blue;
+}
+#topMenu > li > a {
+  color: white;
+}
+#topMenu a:hover {
+  color: red;
+}
+#pakistan {
+  margin: 10;
+  padding: 10px;
+  position: relative;
+}
+.test {
+  color: red;
+}
+
+img {
+  float: right;
+  margin: 4px;
+}
+.floatTest {
+  background-color: aqua;
+  overflow: hidden;
+}
+
+.belowP {
+  background-color: blueviolet;
+  clear: both;
+}
+
+#sidebar {
+  float: right;
+  width: 20%;
+  background-color: lightgray;
+}
+#sidebar ul {
+  list-style-type: none;
+}
+
+#GoToTopButton {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  background-color: black;
+  color: white;
+}
+
+.relative {
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.hasDropDown {
+  position: relative;
+}
+.dropDown {
+  list-style-type: none;
+  background-color: blueviolet;
+  display: none;
+  position: absolute;
+  top: 15px;
+  left: 0px;
+}
+
+.hasDropDown:hover .dropDown {
+  display: block;
+}

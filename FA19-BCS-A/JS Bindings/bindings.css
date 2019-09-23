@@ -1,0 +1,11 @@
+.orange {
+  background-color: orange;
+}
+.blue {
+  background-color: blue;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}

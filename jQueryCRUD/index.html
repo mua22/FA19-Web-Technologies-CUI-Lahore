@@ -24,17 +24,133 @@
       crossorigin="anonymous"
     ></script>
     <script src="jqueryCRUD.js"></script>
+    <link rel="stylesheet" href="custom.css" />
+    <script
+      src="https://kit.fontawesome.com/311b7dfb40.js"
+      crossorigin="anonymous"
+    ></script>
     <title>JQuery Ajax CRUD</title>
   </head>
-  <body>
+  <body class="container">
     <h1>JQuery CRUD</h1>
     <p>
       These pages demonstrated how a query CRUD can be completed. I am using
       https://jsonplaceholder.typicode.com/posts APi for reference
     </p>
     <button class="btn btn-success btn-sm" id="btnGetPosts">Get Posts</button>
-    <div id="posts">
-      <p>There are now posts retrieved Yet</p>
+    <button class="btn btn-info btn-sm" id="btnAddPost">
+      <i class="fa fa-plus"></i> Add New Post
+    </button>
+    <div class="p-2 m-2 newForm">
+      <form action="" id="newPostForm">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            name="title"
+            id="title"
+            aria-describedby="titleHelp"
+            placeholder="Add Title"
+          />
+          <small id="titleHelp" class="form-text text-muted"
+            >Title of the Post</small
+          >
+          <div class="form-group">
+            <label for="body">body</label>
+            <textarea
+              class="form-control"
+              name="body"
+              id="body"
+              rows="3"
+            ></textarea>
+          </div>
+          <button type="submit" id="btnSubmit" class="btn btn-primary">
+            Submit
+          </button>
+          <button id="btnCancel" class="btn btn-warning">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit Post</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="" id="editForm">
+              <div class="form-group">
+                <label for="editTitle">Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="title"
+                  id="editTitle"
+                  aria-describedby="editTitleHelp"
+                  placeholder="Enter Title"
+                />
+                <small id="editTitleHelp" class="form-text text-muted"
+                  >Title of the post</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="editBody">body</label>
+                <textarea
+                  class="form-control"
+                  name="body"
+                  id="editBody"
+                  rows="3"
+                ></textarea>
+              </div>
+              <input type="hidden" name="id" id="editId" />
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary" id="btnSaveEdit">
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="postsDiv">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Body</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="posts"></tbody>
+      </table>
     </div>
   </body>
 </html>

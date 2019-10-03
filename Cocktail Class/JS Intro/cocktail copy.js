@@ -1,5 +1,6 @@
 console.log("Party started");
-
+// dom is not yet prepared
+//bndings will not occur
 function handleClick() {
   console.log("Inside handle click");
   var result = document.getElementById("result");

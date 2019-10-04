@@ -2,23 +2,24 @@ $(function() {
   getRecipes();
   console.log("Ajax function called");
   $("#btn").click(sendPostRequest);
-  sendPostRequest();
+  //sendPostRequest();
 });
-// var baseURL = "https://usman-recipes.herokuapp.com/api/recipes";
-var baseURL = "http://localhost:5000/api/recipes/";
+var baseURL = "https://usman-recipes.herokuapp.com/api/recipes";
+// var baseURL = "http://localhost:5000/api/recipes/";
 function sendPostRequest() {
   console.log("Sending post with");
   var data = $("#newForm").serialize();
 
   $.ajax({
-    contentType: "application/json; charset=utf-8",
-    data: JSON.stringify({ title: "from my json", body: "from my body" }),
-    //  data: data,
+    // contentType: "application/json; charset=utf-8",
+    // data: JSON.stringify({ title: "from my json", body: "from my body" }),
+    data: data,
     url: baseURL,
     method: "POST",
 
     success: function(data, status) {
       console.log(data);
+      getRecipes();
     }
   });
 }

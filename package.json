@@ -1,0 +1,20 @@
+{
+  "name": "bsectionintro",
+  "version": "1.0.0",
+  "description": "Fummy ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mua22/FA19-Web-Technologies-CUI-Lahore.git"
+  },
+  "author": "Usman Akram",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mua22/FA19-Web-Technologies-CUI-Lahore/issues"
+  },
+  "homepage": "https://github.com/mua22/FA19-Web-Technologies-CUI-Lahore#readme",
+  "keywords": []
+}

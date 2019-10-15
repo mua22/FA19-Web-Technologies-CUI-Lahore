@@ -1,0 +1,9 @@
+html
+    head
+        title My Pug Page
+    body
+        h1 Hello from pug
+        p.hello=message
+        ul#mystudents.naughty-students
+            each std in students
+                li=std

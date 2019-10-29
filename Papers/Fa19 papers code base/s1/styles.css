@@ -1,0 +1,63 @@
+#logo {
+  float: left;
+  padding: 20px;
+}
+.menu {
+  float: right;
+  width: 80%;
+  text-align: right;
+  padding-right: 50px;
+}
+#topMenu li {
+  background-color: burlywood;
+  margin-left: 10px;
+}
+#topMenu li {
+  display: inline;
+}
+.header {
+  overflow: hidden;
+}
+
+.left {
+  float: left;
+  width: 20%;
+  margin: 10px;
+}
+.right {
+  float: right;
+  width: 20%;
+}
+#container {
+  border: 2px solid;
+  overflow: hidden;
+  position: relative;
+  padding: 30px;
+  margin: 20px;
+}
+
+.left h3 {
+  background-color: lightgray;
+}
+
+#sideMenu {
+  list-style-type: none;
+}
+
+#sideMenu li {
+  text-align: center;
+  background-color: black;
+  padding: 10px;
+  border-bottom: 2px dashed white;
+}
+#sideMenu li a {
+  color: white;
+  text-decoration: none;
+}
+.super {
+  background-color: black;
+  color: white;
+  position: absolute;
+  left: 300px;
+  top: 150px;
+}

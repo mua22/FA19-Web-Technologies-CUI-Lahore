@@ -1,0 +1,8 @@
+h1 {
+  color: red;
+}
+
+#menu li {
+  display: inline;
+  padding: 2px;
+}

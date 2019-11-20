@@ -1,3 +1,10 @@
 h1 {
   color: red;
 }
+
+.price-green {
+  color: green;
+}
+.price-orange {
+  color: orange;
+}

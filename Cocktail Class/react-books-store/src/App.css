@@ -3,3 +3,12 @@
   margin: 10px;
   padding: 5px;
 }
+
+.red-price {
+  color: red;
+}
+
+.green-price {
+  color: green;
+  text-decoration: underline;
+}

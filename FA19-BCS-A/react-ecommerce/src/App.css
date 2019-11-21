@@ -3,3 +3,10 @@
   margin: 10px;
   padding: 10px;
 }
+
+.price-red {
+  color: red;
+}
+.price-orange {
+  color: orange;
+}

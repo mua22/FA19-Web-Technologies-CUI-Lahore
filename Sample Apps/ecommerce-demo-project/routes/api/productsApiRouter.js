@@ -9,7 +9,7 @@ const {
 } = require("../../models/ProductModel");
 var router = express.Router();
 //get all products
-router.get("/", auth, admin, async (req, res) => {
+router.get("/", async (req, res) => {
   let products = await Product.find()
     .select({ name: 1 })
     .sort({ name: 1 });

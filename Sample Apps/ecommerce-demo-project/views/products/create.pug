@@ -1,0 +1,11 @@
+extends ../layout 
+
+block content
+    br
+    br
+    form(action="/products/store" method="POST")
+    
+        .form-group
+            input.form-control(type="text" placeholder="Enter Name" name="name")
+            input.form-control(type="text" placeholder="Enter Price" name="price")
+            input.btn.btn-info(type="submit" value="Create New Product")

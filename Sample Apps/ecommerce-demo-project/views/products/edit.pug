@@ -1,0 +1,11 @@
+extends ../layout 
+
+block content
+    br
+    br
+    form(action="/products/update/"+product._id method="POST")
+    
+        .form-group
+            input.form-control(type="text" placeholder="Enter Name" name="name" value=product.name)
+            input.form-control(type="text" placeholder="Enter Price" name="price" value=product.price)
+            input.btn.btn-info(type="submit" value="Update Product")

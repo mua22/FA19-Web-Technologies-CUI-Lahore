@@ -1,0 +1,4 @@
+{
+  "jwtPrivateKey": "usmanPrivateKey",
+  "db": "mongodb://localhost/ecommerce"
+}

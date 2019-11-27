@@ -1,0 +1,11 @@
+extends ../layout 
+
+block content
+    a.btn.btn-info(href="/products/create") Add New Product
+    h1 All Products
+    each product in products
+        a.btn.btn-danger(href="/products/delete/"+product._id) Delete
+        a.btn.btn-warning(href="/products/edit/"+product._id) Edit
+        a(href="/products/"+product.id)   
+            h3.product-name=product.name
+            

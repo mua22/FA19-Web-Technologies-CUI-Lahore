@@ -11,7 +11,7 @@ var router = express.Router();
 //get all products
 router.get("/", async (req, res) => {
   let products = await Product.find()
-    .select({ name: 1 })
+    .select({ name: 1, price: 1 })
     .sort({ name: 1 });
   // .limit(3)
   return res.send(products);

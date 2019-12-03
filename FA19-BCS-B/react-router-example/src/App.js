@@ -6,6 +6,7 @@ import Products from "./components/Products";
 import NewProduct from "./components/NewProduct";
 import Login from "./components/Auth/Login";
 import Logout from "./components/Auth/LogOut";
+import jwtDecode from "jwt-decode";
 function App() {
   return (
     <div className="container">
@@ -56,13 +57,13 @@ function App() {
               >
                 Home
               </Link>
-              {localStorage.getItem("token") ? (
+              {getLoggedInUser() ? (
                 <Link
                   className="nav-item nav-link active"
                   to="/logout"
                   aria-current="page"
                 >
-                  Logout
+                  Logout {getLoggedInUser().name}
                 </Link>
               ) : (
                 <Link
@@ -76,7 +77,7 @@ function App() {
             </div>
           </div>
         </nav>
-        {localStorage.getItem("token")}
+
         <Switch>
           <Route path="/products/new" component={NewProduct} />
           <Route path="/login" component={Login} />
@@ -106,5 +107,13 @@ function About() {
 
 function Users() {
   return <h2>Users</h2>;
+}
+function getLoggedInUser() {
+  try {
+    const jwt = localStorage.getItem("token");
+    return jwtDecode(jwt);
+  } catch (ex) {
+    return null;
+  }
 }
 export default App;

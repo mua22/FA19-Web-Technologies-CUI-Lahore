@@ -31,7 +31,7 @@ router.delete("/:id", async (req, res) => {
 });
 
 //create new product
-router.post("/", async (req, res) => {
+router.post("/", auth, async (req, res) => {
   let { error } = validateProduct(req.body);
   if (error) return res.status(400).send(error.details[0].message);
   let product = new Product(req.body);

@@ -3,13 +3,9 @@ import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Products from "./components/Products";
-import NewProduct from "./components/NewProduct";
-import Login from "./components/Auth/Login";
-import Logout from "./components/Auth/LogOut";
 function App() {
   return (
     <div className="container">
-      {/* <Products /> */}
       <Router>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <a className="navbar-brand" href="/">
@@ -44,6 +40,13 @@ function App() {
               </Link>
               <Link
                 className="nav-item nav-link active"
+                to="/"
+                aria-current="page"
+              >
+                Products
+              </Link>
+              <Link
+                className="nav-item nav-link active"
                 to="/users"
                 aria-current="page"
               >
@@ -51,47 +54,29 @@ function App() {
               </Link>
               <Link
                 className="nav-item nav-link active"
-                to="/"
+                to="/home"
                 aria-current="page"
               >
                 Home
               </Link>
-              {localStorage.getItem("token") ? (
-                <Link
-                  className="nav-item nav-link active"
-                  to="/logout"
-                  aria-current="page"
-                >
-                  Logout
-                </Link>
-              ) : (
-                <Link
-                  className="nav-item nav-link active"
-                  to="/login"
-                  aria-current="page"
-                >
-                  Login
-                </Link>
-              )}
             </div>
           </div>
         </nav>
-        {localStorage.getItem("token")}
+        <hr />
         <Switch>
-          <Route path="/products/new" component={NewProduct} />
-          <Route path="/login" component={Login} />
-          <Route path="/logout" component={Logout} />
+          <Route path="/about" component={About} />
 
-          <Route path="/about">
-            <About />
-          </Route>
           <Route path="/users">
             <Users />
           </Route>
           <Route path="/">
             <Products />
           </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
         </Switch>
+        <hr />
       </Router>
     </div>
   );

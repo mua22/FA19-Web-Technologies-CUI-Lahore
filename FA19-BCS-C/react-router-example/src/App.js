@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Products from "./components/Products";
+import CreateProduct from "./components/CreateProduct";
 function App() {
   return (
     <div className="container">
@@ -65,13 +66,12 @@ function App() {
         <hr />
         <Switch>
           <Route path="/about" component={About} />
-
+          <Route path="/products/create" component={CreateProduct} />
           <Route path="/users">
             <Users />
           </Route>
-          <Route path="/">
-            <Products />
-          </Route>
+          <Route path="/" component={Products} />
+
           <Route path="/home">
             <Home />
           </Route>

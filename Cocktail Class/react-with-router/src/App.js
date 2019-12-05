@@ -3,6 +3,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Products from "./components/Products";
+import CreateProduct from "./components/CreateProduct";
+import Login from "./components/auth/Login";
 function App() {
   return (
     <div className="container">
@@ -61,9 +63,9 @@ function App() {
           <Route path="/users">
             <Users />
           </Route>
-          <Route path="/">
-            <Products />
-          </Route>
+          <Route path="/products/new" component={CreateProduct} />
+          <Route path="/login" component={Login} />
+          <Route path="/" component={Products} />
         </Switch>
       </Router>
     </div>

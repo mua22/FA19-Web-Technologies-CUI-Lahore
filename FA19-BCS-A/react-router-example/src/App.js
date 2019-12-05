@@ -57,9 +57,8 @@ function App() {
           </div>
         </nav>
         <Switch>
-          <Route path="/products/new">
-            <NewProduct />
-          </Route>
+          <Route path="/products/new" component={NewProduct} />
+
           <Route path="/about">
             This is about page
             <About />

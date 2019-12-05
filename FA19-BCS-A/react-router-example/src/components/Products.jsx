@@ -5,11 +5,14 @@ import { Link } from "react-router-dom";
 const Products = () => {
   React.useEffect(() => {
     console.log("From products Component");
+    loadData();
+  }, []);
+  const loadData = () => {
     axios.get("http://localhost:4000/api/products").then(res => {
       console.log(res.data);
       setProducts(res.data);
     });
-  }, []);
+  };
   const [products, setProducts] = React.useState([]);
   //   let products = [
   //     { name: "Pen", price: 10 },
@@ -22,7 +25,7 @@ const Products = () => {
         + Product
       </Link>
       {products.map((p, index) => (
-        <SingleProduct key={index} product={p} />
+        <SingleProduct key={index} product={p} onProductDeleted={loadData} />
       ))}
     </div>
   );

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Products from "./components/Products";
 import CreateProduct from "./components/CreateProduct";
 import Login from "./components/auth/Login";
+import Calculator from "./components/Calculator/Calculator";
 function App() {
   return (
     <div className="container">
@@ -35,6 +36,13 @@ function App() {
               </Link>
               <Link
                 className="nav-item nav-link active"
+                to="/calculator"
+                aria-current="page"
+              >
+                Calculator
+              </Link>
+              <Link
+                className="nav-item nav-link active"
                 to="/about"
                 aria-current="page"
               >
@@ -59,6 +67,7 @@ function App() {
         </nav>
         <Switch>
           <Route path="/about/:id?" component={About} />
+          <Route path="/calculator" component={Calculator} />
 
           <Route path="/users">
             <Users />

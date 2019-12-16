@@ -4,6 +4,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Products from "./components/Products";
 import NewProduct from "./components/NewProduct";
+import Calculator from "./components/Calculator/Calculator";
 function App() {
   return (
     <div className="container">
@@ -34,10 +35,17 @@ function App() {
               </Link>
               <Link
                 className="nav-item nav-link active"
-                to="/about"
+                to="/"
                 aria-current="page"
               >
-                About
+                Home
+              </Link>
+              <Link
+                className="nav-item nav-link active"
+                to="/calculator"
+                aria-current="page"
+              >
+                Calculator
               </Link>
               <Link
                 className="nav-item nav-link active"
@@ -58,11 +66,14 @@ function App() {
         </nav>
         <Switch>
           <Route path="/products/new" component={NewProduct} />
-
+          <Route path="/calculator">
+            <Calculator />
+          </Route>
           <Route path="/about">
             This is about page
             <About />
           </Route>
+
           <Route path="/products">
             <Products />
           </Route>

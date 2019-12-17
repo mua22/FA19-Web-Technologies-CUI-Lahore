@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 const TodoStatusCount = props => {
-  console.log(props);
+  // console.log(props);
   var completed = props.todos.filter(t => t.status);
   return (
     <h5>

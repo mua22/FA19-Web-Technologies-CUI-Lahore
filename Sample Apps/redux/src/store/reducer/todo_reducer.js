@@ -3,7 +3,7 @@ import { produce } from "immer";
 const initialState = {
   todos: [
     {
-      text: "Pakistan Zindabad",
+      text: "I will take Coffee",
       status: true
     },
     {
@@ -16,6 +16,11 @@ const initialState = {
 
 export function todoReducer(state = initialState, action) {
   switch (action.type) {
+    case "MARK_ALL":
+      return produce(state, draftState => {
+        for (var i = 0; i < draftState.todos.length; i++)
+          draftState.todos[i].status = true;
+      });
     case "TOGGLE_STATUS":
       return produce(state, draftState => {
         for (var i = 0; i < draftState.todos.length; i++)

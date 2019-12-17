@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faCheck } from "@fortawesome/free-solid-svg-icons";
 import * as allActions from "./../store/actions/todo_actions";
 import TodoStatusCount from "./TodoStatusCount";
+import MarkAllButton from "./MarkAllButton";
 const ShowTodo = ({ todos, filter }) => {
   const filtered = filterTodo(todos, filter);
   return (
@@ -35,6 +36,7 @@ const ShowTodo = ({ todos, filter }) => {
         >
           Not Completed
         </button>
+        <MarkAllButton />
       </div>
       <p className="float-right">{filter + " Todos "}</p>
       <table className="table table-dark  table-bordered table-collapsed text-center">
@@ -77,6 +79,7 @@ const ShowTodo = ({ todos, filter }) => {
         </tbody>
       </table>
       <TodoStatusCount />
+      {/* <TodoStatusCount /> */}
     </div>
   );
 };

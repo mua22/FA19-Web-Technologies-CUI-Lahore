@@ -6,3 +6,4 @@ export const SHOW_ALL = "SHOW_ALL";
 export const COMPLETED = "COMPLETED";
 export const NOT_COMPLETED = "NOT_COMPLETED";
 export const TOGGLE_STATUS = "TOGGLE_STATUS";
+export const MARK_ALL = "MARK_ALL";

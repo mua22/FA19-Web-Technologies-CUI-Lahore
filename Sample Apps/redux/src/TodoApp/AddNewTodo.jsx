@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as allActions from "./../store/actions/todo_actions";
+import ToDoCounter from "./ToDoCounter";
 class AddNewTodo extends Component {
   state = { text: "" };
   hanldeSubmit = e => {
@@ -15,15 +16,18 @@ class AddNewTodo extends Component {
   };
   render() {
     return (
-      <form onSubmit={this.hanldeSubmit} className="text-center">
-        <input
-          type="text"
-          className="ml-auto mr-auto mt-2 mb-2 form-control col-3"
-          placeholder="Enter A Todo"
-          onChange={this.hanldeChange}
-          value={this.state.text}
-        />
-      </form>
+      <>
+        <ToDoCounter />
+        <form onSubmit={this.hanldeSubmit} className="text-center">
+          <input
+            type="text"
+            className="ml-auto mr-auto mt-2 mb-2 form-control col-3"
+            placeholder="Enter A Todo"
+            onChange={this.hanldeChange}
+            value={this.state.text}
+          />
+        </form>
+      </>
     );
   }
 }

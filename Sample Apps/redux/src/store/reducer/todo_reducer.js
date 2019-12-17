@@ -1,11 +1,14 @@
 import * as allActions from "./../actions/todo_actions";
 import { produce } from "immer";
-
 const initialState = {
   todos: [
     {
       text: "Pakistan Zindabad",
       status: true
+    },
+    {
+      text: "A section is officially banished",
+      status: false
     }
   ],
   filter: allActions.SHOW_ALL
@@ -13,6 +16,13 @@ const initialState = {
 
 export function todoReducer(state = initialState, action) {
   switch (action.type) {
+    case "TOGGLE_STATUS":
+      return produce(state, draftState => {
+        for (var i = 0; i < draftState.todos.length; i++)
+          draftState.todos[i].status = !draftState.todos[i].status;
+        // return draftState;
+      });
+
     case allActions.ADD_TODO:
       return produce(state, draftState => {
         draftState.todos.push(action.todo);

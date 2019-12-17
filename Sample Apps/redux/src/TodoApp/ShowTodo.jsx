@@ -3,11 +3,20 @@ import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faCheck } from "@fortawesome/free-solid-svg-icons";
 import * as allActions from "./../store/actions/todo_actions";
+import TodoStatusCount from "./TodoStatusCount";
 const ShowTodo = ({ todos, filter }) => {
   const filtered = filterTodo(todos, filter);
   return (
     <div className="container">
       <div className="btn-group float-left">
+        <button
+          className="btn btn-sm btn-primary"
+          onClick={e => {
+            window.store.dispatch({ type: "TOGGLE_STATUS" });
+          }}
+        >
+          Toggle Status
+        </button>
         <button
           className="btn btn-sm btn-primary"
           onClick={() => setFilter(allActions.SHOW_ALL)}
@@ -67,6 +76,7 @@ const ShowTodo = ({ todos, filter }) => {
           })}
         </tbody>
       </table>
+      <TodoStatusCount />
     </div>
   );
 };

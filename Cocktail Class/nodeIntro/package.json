@@ -12,7 +12,7 @@
   "author": "Usman",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "underscore": "^1.9.1"
   }
 }
